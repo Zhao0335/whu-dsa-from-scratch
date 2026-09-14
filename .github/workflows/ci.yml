@@ -9,6 +9,14 @@ jobs:
         run: cmake -S . -B build
       - name: Build default targets
         run: cmake --build build
+      - name: Compile every exercise target
+        shell: bash
+        run: |
+          set -eo pipefail
+          cmake --build build --target help | awk '/test_.*_bin$/ {print $2}' | while read -r target; do
+            echo "Compiling ${target}"
+            cmake --build build --target "${target}"
+          done
       - name: Run repository sanity test
         run: ctest --test-dir build -R '^repo_sanity$' --output-on-failure
       - name: Check forbidden STL shortcuts
