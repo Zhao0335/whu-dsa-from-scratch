@@ -1,7 +1,6 @@
 #include "whudsa/algorithm/backtracking.hpp"
-
+#include <stdexcept>
 namespace whudsa {
-
-// 待完成：请自行实现本模块。
-
-} // 命名空间 whudsa
+// ==================== CORE TODO ====================
+int countNQueensSolutions(int n) { throw std::logic_error("TODO: countNQueensSolutions"); }
+}

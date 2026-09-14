@@ -1,7 +1,8 @@
 #include "whudsa/string/boyer_moore.hpp"
-
+#include <stdexcept>
 namespace whudsa {
-
-// 待完成：请自行实现本模块。
-
-} // 命名空间 whudsa
+// ==================== CORE TODO ====================
+int boyerMooreSearch(const char* text, const char* pattern) {
+    throw std::logic_error("TODO: boyerMooreSearch");
+}
+}

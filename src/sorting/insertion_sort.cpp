@@ -1,7 +1,6 @@
 #include "whudsa/sorting/insertion_sort.hpp"
-
+#include <stdexcept>
 namespace whudsa {
-
-// 待完成：请自行实现本模块。
-
-} // 命名空间 whudsa
+// CORE TODO：维护有序前缀，把当前元素插入正确位置。
+void insertionSort(int* a, int n) { throw std::logic_error("TODO: insertionSort"); }
+}

@@ -1,7 +1,6 @@
 #include "whudsa/algorithm/enumeration.hpp"
-
+#include <stdexcept>
 namespace whudsa {
-
-// 待完成：请自行实现本模块。
-
-} // 命名空间 whudsa
+// ==================== CORE TODO ====================
+int subsetSumEnumeration(const int* a, int n, int target) { throw std::logic_error("TODO: subsetSumEnumeration"); }
+}

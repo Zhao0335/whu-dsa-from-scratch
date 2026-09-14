@@ -1,7 +1,8 @@
 #include "whudsa/string/naive_match.hpp"
-
+#include <stdexcept>
 namespace whudsa {
-
-// 待完成：请自行实现本模块。
-
-} // 命名空间 whudsa
+// ==================== CORE TODO ====================
+int naiveMatch(const char* text, const char* pattern) {
+    throw std::logic_error("TODO: naiveMatch");
+}
+}
