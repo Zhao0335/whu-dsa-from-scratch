@@ -18,9 +18,10 @@ if(Python3_Interpreter_FOUND)
         VERBATIM)
 endif()
 
+# 前四个参数保持原来的练习接口；后面的 ARGN 用来补组合算法需要链接的支撑模块。
 function(add_whudsa_exercise target test_name source test_source)
     set(bin_target ${target}_bin)
-    add_executable(${bin_target} EXCLUDE_FROM_ALL ${source} ${test_source})
+    add_executable(${bin_target} EXCLUDE_FROM_ALL ${source} ${test_source} ${ARGN})
     target_include_directories(${bin_target} PRIVATE ${CMAKE_SOURCE_DIR}/include)
     add_custom_target(${target}
         COMMAND $<TARGET_FILE:${bin_target}>
@@ -54,8 +55,12 @@ add_whudsa_exercise(test_skew_heap skew_heap src/priority_queue/skew_heap.cpp te
 add_whudsa_exercise(test_binomial_heap binomial_heap src/priority_queue/binomial_heap.cpp tests/priority_queue/test_binomial_heap.cpp)
 add_whudsa_exercise(test_adjacency_matrix adjacency_matrix src/graph/adjacency_matrix.cpp tests/graph/test_adjacency_matrix.cpp)
 add_whudsa_exercise(test_adjacency_list adjacency_list src/graph/adjacency_list.cpp tests/graph/test_adjacency_list.cpp)
-add_whudsa_exercise(test_traversal traversal src/graph/traversal.cpp tests/graph/test_traversal.cpp)
-add_whudsa_exercise(test_connectivity connectivity src/graph/connectivity.cpp tests/graph/test_connectivity.cpp)
+add_whudsa_exercise(test_traversal traversal src/graph/traversal.cpp tests/graph/test_traversal.cpp
+    src/graph/adjacency_list.cpp
+    src/stack_queue/array_stack.cpp
+    src/stack_queue/circular_queue.cpp)
+add_whudsa_exercise(test_connectivity connectivity src/graph/connectivity.cpp tests/graph/test_connectivity.cpp
+    src/graph/adjacency_list.cpp)
 add_whudsa_exercise(test_disjoint_set disjoint_set src/disjoint_set/disjoint_set.cpp tests/disjoint_set/test_disjoint_set.cpp)
 add_whudsa_exercise(test_insertion_sort insertion_sort src/sorting/insertion_sort.cpp tests/sorting/test_insertion_sort.cpp)
 add_whudsa_exercise(test_selection_sort selection_sort src/sorting/selection_sort.cpp tests/sorting/test_selection_sort.cpp)
@@ -63,10 +68,17 @@ add_whudsa_exercise(test_bubble_sort bubble_sort src/sorting/bubble_sort.cpp tes
 add_whudsa_exercise(test_quick_sort quick_sort src/sorting/quick_sort.cpp tests/sorting/test_quick_sort.cpp)
 add_whudsa_exercise(test_merge_sort merge_sort src/sorting/merge_sort.cpp tests/sorting/test_merge_sort.cpp)
 add_whudsa_exercise(test_heap_sort heap_sort src/sorting/heap_sort.cpp tests/sorting/test_heap_sort.cpp)
-add_whudsa_exercise(test_shortest_path shortest_path src/graph/shortest_path.cpp tests/graph/test_shortest_path.cpp)
-add_whudsa_exercise(test_mst mst src/graph/mst.cpp tests/graph/test_mst.cpp)
-add_whudsa_exercise(test_topological_sort topological_sort src/graph/topological_sort.cpp tests/graph/test_topological_sort.cpp)
-add_whudsa_exercise(test_critical_path critical_path src/graph/critical_path.cpp tests/graph/test_critical_path.cpp)
+add_whudsa_exercise(test_shortest_path shortest_path src/graph/shortest_path.cpp tests/graph/test_shortest_path.cpp
+    src/graph/adjacency_list.cpp
+    src/priority_queue/binary_heap.cpp)
+add_whudsa_exercise(test_mst mst src/graph/mst.cpp tests/graph/test_mst.cpp
+    src/graph/adjacency_list.cpp
+    src/disjoint_set/disjoint_set.cpp)
+add_whudsa_exercise(test_topological_sort topological_sort src/graph/topological_sort.cpp tests/graph/test_topological_sort.cpp
+    src/graph/adjacency_list.cpp
+    src/stack_queue/circular_queue.cpp)
+add_whudsa_exercise(test_critical_path critical_path src/graph/critical_path.cpp tests/graph/test_critical_path.cpp
+    src/graph/adjacency_list.cpp)
 add_whudsa_exercise(test_sequential_search sequential_search src/searching/sequential_search.cpp tests/searching/test_sequential_search.cpp)
 add_whudsa_exercise(test_binary_search binary_search src/searching/binary_search.cpp tests/searching/test_binary_search.cpp)
 add_whudsa_exercise(test_indexed_search indexed_search src/searching/indexed_search.cpp tests/searching/test_indexed_search.cpp)
