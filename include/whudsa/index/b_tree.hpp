@@ -1,16 +1,31 @@
 #pragma once
-// 函数实现要求：
-// 每个接口都必须完成声明对应的功能，处理边界情况，并维护数据结构不变量。
-// - BTree：B树，维护节点关键字、孩子和最小度数。
-// - contains：按树的有序性质查找并返回是否存在。
-// - insert：按比较结果插入新值，明确重复值策略并返回成功状态。
-// - erase：删除节点并正确处理零个、一个和两个孩子。
-// 核心实现不得依赖 STL 容器和算法。
+
 namespace whudsa {
 class BTree {
 public:
-    explicit BTree(int minimumDegree=2); ~BTree();
-    bool contains(int key) const; void insert(int key); bool erase(int key);
-private: // 待完成：设计节点关键字和孩子，并实现分裂、借关键字和合并。
+    explicit BTree(int minimumDegree = 2);
+    ~BTree();
+    BTree(const BTree&) = delete;
+    BTree& operator=(const BTree&) = delete;
+
+    bool contains(int key) const; // CORE TODO
+    void insert(int key);         // CORE TODO
+    bool erase(int key);          // CORE TODO
+
+private:
+    struct Node {
+        bool leaf;
+        int keyCount;
+        int* keys;       // 最多 2*t_-1 个关键字
+        Node** children; // 最多 2*t_ 个孩子
+    };
+    Node* root_;
+    int t_;
+
+    Node* makeNode(bool leaf) const;
+    void destroy(Node* node);
+    void splitChild(Node* parent, int childIndex);            // CORE TODO helper
+    void insertNonFull(Node* node, int key);                  // CORE TODO helper
+    bool eraseFromNode(Node* node, int key);                  // CORE TODO helper
 };
 }
