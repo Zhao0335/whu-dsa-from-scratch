@@ -1,0 +1,58 @@
+# Implementation Roadmap
+
+Use this as the practice checklist. Do not tick a topic until implementation, tests and complexity notes are complete.
+
+- [ ] Complexity basics and asymptotic analysis
+- [ ] Sequential list
+- [ ] Singly linked list
+- [ ] Doubly linked list
+- [ ] Circular linked list
+- [ ] Unrolled/block linked list
+- [ ] Array stack
+- [ ] Linked stack
+- [ ] Circular queue
+- [ ] Linked queue
+- [ ] Sequential string
+- [ ] Linked string
+- [ ] KMP
+- [ ] Boyer-Moore
+- [ ] Sequential binary tree
+- [ ] Linked binary tree
+- [ ] Tree traversals
+- [ ] Huffman tree and coding
+- [ ] General tree / forest conversion
+- [ ] Binary heap
+- [ ] D-ary heap
+- [ ] Leftist heap
+- [ ] Skew heap
+- [ ] Binomial heap
+- [ ] Graph adjacency matrix
+- [ ] Graph adjacency list
+- [ ] DFS / BFS
+- [ ] Graph connectivity
+- [ ] Single-source shortest path
+- [ ] All-pairs shortest path
+- [ ] Kruskal
+- [ ] Prim
+- [ ] Topological sort / AOV
+- [ ] Critical path / AOE
+- [ ] Disjoint set with path compression
+- [ ] Insertion / selection / bubble sort
+- [ ] Quick sort
+- [ ] Merge sort
+- [ ] Heap sort
+- [ ] Sequential / binary / indexed search
+- [ ] Binary search tree
+- [ ] AVL tree
+- [ ] Hash table: open addressing
+- [ ] Hash table: chaining
+- [ ] Inverted index
+- [ ] Bitmap index
+- [ ] B-tree
+- [ ] B+ tree
+- [ ] Enumeration
+- [ ] Backtracking
+- [ ] Branch and bound
+- [ ] Divide and conquer + Master theorem
+- [ ] Dynamic programming
+- [ ] Greedy algorithms and correctness proofs
