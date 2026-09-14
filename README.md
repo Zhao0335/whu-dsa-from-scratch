@@ -1,30 +1,29 @@
 # WHU-DSA From Scratch
 
-武汉大学《数据结构与算法》手搓练习仓库。
+武汉大学《数据结构与算法》免修/机试复习仓库。
 
-这个仓库的目标不是实现一个工程级 STL 替代品，也不是系统训练 C++ 对象模型，而是用于复习课程、准备不提供 STL 的免修考试，并训练核心数据结构与算法的手写能力。
+这个仓库只做一件事：**练数据结构和算法本体，不把复习时间耗在 C++ 工程细节上。**
 
-## 先看什么
+## 你只写 `CORE TODO`
 
-第一次打开仓库，请按顺序阅读：
+仓库中的代码分两类：
 
-1. [`START_HERE.md`](START_HERE.md)：仓库结构、学习顺序、每一步具体做什么。
-2. [`PRACTICE_RULES.md`](PRACTICE_RULES.md)：哪些代码需要你写，哪些属于仓库提供的支撑代码。
-3. [`COURSE_MAP.md`](COURSE_MAP.md)：教学日历与仓库模块对应关系。
-4. [`ROADMAP.md`](ROADMAP.md)：完成进度。
+- **支撑代码**：构造/析构、拷贝、内存释放、简单 getter、边界检查、扩容等。已经写好，只需要能读懂。
+- **CORE TODO**：顺序表搬移、链表改指针、栈/队列进出、树/堆维护、图算法、排序、查找、KMP、并查集等。必须自己实现。
 
-## 练习原则
+原则：**没有标 `CORE TODO` 的代码不要主动重写。**
 
-仓库现在明确区分两类代码：
+## 从哪里开始
 
-- **支撑代码**：构造/析构、拷贝语义、简单访问器、测试样板等，与数据结构算法本身关系不大的 C++ 细节，仓库直接提供。
-- **CORE TODO**：真正需要你自己实现的顺序表插删查、链表操作、堆调整、并查集、排序、图算法、KMP 等课程核心内容。
+先读：
 
-你需要理解内部表示和不变量，但不需要为了练一道数据结构题先补一整套 C++ 工程代码。
+1. [`START_HERE.md`](START_HERE.md)：学习顺序和使用方法。
+2. [`CORE_TODO_MAP.md`](CORE_TODO_MAP.md)：每个模块到底要自己写哪些函数。
+3. [`PRACTICE_RULES.md`](PRACTICE_RULES.md)：允许/禁止使用的东西。
+4. [`COURSE_MAP.md`](COURSE_MAP.md)：课程内容到仓库文件的映射。
+5. [`ROADMAP.md`](ROADMAP.md)：进度表。
 
-## 第一个任务
-
-从 `SeqList` 开始：
+第一个任务仍然是 `SeqList`：
 
 ```text
 include/whudsa/linear/seq_list.hpp
@@ -32,26 +31,23 @@ src/linear/seq_list.cpp
 tests/linear/test_seq_list.cpp
 ```
 
-当前 `SeqList` 已经提供生命周期管理和扩容等支撑代码。你只需要实现：
-
-```text
-pushBack
-insert
-erase
-find
-```
-
-第一次配置：
+配置：
 
 ```bash
 cmake -S . -B build
 cmake --build build
 ```
 
-然后构建并运行对应测试：
+练某一项时只构建对应 target，例如：
 
 ```bash
 cmake --build build --target test_seq_list
 ```
 
-测试失败时只看 `CORE TODO`，不要去补仓库已经提供的支撑代码。
+未完成的核心函数会抛出 `TODO`，定位到对应 `CORE TODO` 后实现即可。
+
+## 仓库不要求你额外练什么
+
+第一轮复习不要求：Rule of Three / Rule of Five、模板库设计、Allocator、迭代器体系、复杂异常层次、工程级 STL 兼容接口。
+
+这些内容并非没价值，只是不属于这个仓库当前的考试复习目标。
