@@ -1,22 +1,26 @@
 #pragma once
-// 函数实现要求：
-// 每个接口都必须完成声明对应的功能，处理边界情况，并维护数据结构不变量。
-// - CircularQueue：循环队列对象，维护队首、队尾、容量和回绕。
-// - size：返回当前元素数量。
-// - empty：判断元素数量是否为零。
-// - full：实现该函数名所表达的操作；参数和返回值含义以声明为准。
-// - front：读取队首元素，不删除它。
-// - push：向栈顶或队尾加入元素。
-// - pop：删除栈顶或队首元素，空结构时按项目约定处理。
-// - clear：释放或重置元素，保留可复用的容量。
-// 核心实现不得依赖 STL 容器和算法。
+
 namespace whudsa {
 class CircularQueue {
 public:
-    explicit CircularQueue(int capacity = 8); ~CircularQueue();
-    int size() const; bool empty() const; bool full() const;
-    int front() const; void push(int value); void pop(); void clear();
+    explicit CircularQueue(int capacity = 8);
+    ~CircularQueue();
+    CircularQueue(const CircularQueue&) = delete;
+    CircularQueue& operator=(const CircularQueue&) = delete;
+
+    int size() const;
+    bool empty() const;
+    bool full() const;
+    int front() const;
+    void push(int value); // CORE TODO
+    void pop();           // CORE TODO
+    void clear();
+
 private:
-    // 待完成：明确 front/rear 的含义、空/满条件以及循环回绕策略。
+    int* data_;
+    int capacity_;
+    int front_;
+    int rear_;   // 指向下一次写入的位置
+    int size_;
 };
 }
