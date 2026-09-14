@@ -1,18 +1,22 @@
 #ifndef WHUDSA_ALGORITHMS_DYNAMIC_PROGRAMMING_HPP
 #define WHUDSA_ALGORITHMS_DYNAMIC_PROGRAMMING_HPP
 
+// 函数实现要求：
+// 每个接口都必须完成声明对应的功能，处理边界情况，并维护数据结构不变量。
+// - DynamicProgramming：课程要求的动态规划接口；先补充 API 再实现。
+// 核心实现不得依赖 STL 容器和算法。
 namespace whudsa {
 namespace algorithms {
 
-// TODO: Implement dynamic programming from scratch.
-// Rule: no STL containers/algorithms in core implementations.
+// 待完成：请从零实现动态规划算法。
+// 要求：核心实现不得使用 STL 容器和算法。
 class DynamicProgramming {
 public:
     DynamicProgramming() = default;
-    // TODO: define the course-required API before implementing it.
+    // 待完成：先根据课程要求补充接口，再实现具体函数。
 };
 
-}  // namespace algorithms
-}  // namespace whudsa
+}  // 命名空间 algorithms
+}  // 命名空间 whudsa
 
 #endif  // WHUDSA_ALGORITHMS_DYNAMIC_PROGRAMMING_HPP

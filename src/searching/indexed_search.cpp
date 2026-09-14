@@ -2,6 +2,6 @@
 
 namespace whudsa {
 
-// TODO: implement this module yourself.
+// 待完成：请自行实现本模块。
 
-} // namespace whudsa
+} // 命名空间 whudsa

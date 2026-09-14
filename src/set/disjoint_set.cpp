@@ -3,7 +3,7 @@
 namespace whudsa {
 namespace set {
 
-// TODO: implementation.
+// 待完成：请补充具体实现。
 
-}  // namespace set
-}  // namespace whudsa
+}  // 命名空间 set
+}  // 命名空间 whudsa

@@ -3,7 +3,7 @@
 namespace whudsa {
 namespace searching {
 
-// TODO: implementation.
+// 待完成：请补充具体实现。
 
-}  // namespace searching
-}  // namespace whudsa
+}  // 命名空间 searching
+}  // 命名空间 whudsa

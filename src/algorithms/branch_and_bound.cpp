@@ -3,7 +3,7 @@
 namespace whudsa {
 namespace algorithms {
 
-// TODO: implementation.
+// 待完成：请补充具体实现。
 
-}  // namespace algorithms
-}  // namespace whudsa
+}  // 命名空间 algorithms
+}  // 命名空间 whudsa

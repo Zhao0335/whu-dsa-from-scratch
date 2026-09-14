@@ -7,7 +7,7 @@ int main() {
     assert(a.empty());
     a.pushBack(10);
     assert(a.size() == 1 && a.get(0) == 10);
-    a.pushBack(20); // should force growth from a very small initial capacity
+    a.pushBack(20); // 应当触发从很小初始容量开始的扩容
     assert(a.size() == 2 && a.get(1) == 20);
     a.insert(1, 15);
     assert(a.size() == 3 && a.get(0) == 10 && a.get(1) == 15 && a.get(2) == 20);
@@ -21,7 +21,7 @@ int main() {
     assert(a.get(0) == 7);
     SeqList b = a;
     b.set(0, 99);
-    assert(a.get(0) == 7 && b.get(0) == 99); // deep copy
+    assert(a.get(0) == 7 && b.get(0) == 99); // 深拷贝
     a.clear();
     assert(a.empty());
     return 0;

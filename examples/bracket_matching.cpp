@@ -1,2 +1,2 @@
-// TODO: bracket matching using your ArrayStack or LinkedStack.
+// 待完成：使用自己实现的数组栈或链栈完成括号匹配。
 int main(){ return 0; }

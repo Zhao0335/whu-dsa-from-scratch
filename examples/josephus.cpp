@@ -1,2 +1,2 @@
-// TODO: solve Josephus using your CircularLinkedList.
+// 待完成：使用自己实现的循环链表解决约瑟夫问题。
 int main(){ return 0; }

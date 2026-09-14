@@ -1,7 +1,10 @@
 #include "whudsa/linear/seq_list.hpp"
 
 namespace whudsa {
+class SeqList {
+    public:
+        SeqList();
 
-// TODO: implement this module yourself.
-
-} // namespace whudsa
+        
+};
+} // 命名空间 whudsa

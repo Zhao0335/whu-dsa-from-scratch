@@ -2,7 +2,7 @@
 #include "whudsa/set/disjoint_set.hpp"
 
 int main() {
-    // TODO: add tests before/while implementing disjoint_set.
+    // 待完成：请在实现前或实现过程中补充测试。disjoint_set.
     assert(true);
     return 0;
 }
