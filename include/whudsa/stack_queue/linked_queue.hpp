@@ -1,18 +1,10 @@
-#ifndef WHUDSA_STACK_QUEUE_LINKED_QUEUE_HPP
-#define WHUDSA_STACK_QUEUE_LINKED_QUEUE_HPP
-
+#pragma once
 namespace whudsa {
-namespace stack_queue {
-
-// TODO: Implement linked queue from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class LinkedQueue {
 public:
-    LinkedQueue() = default;
-    // TODO: define the course-required API before implementing it.
+    LinkedQueue(); ~LinkedQueue();
+    int size() const; bool empty() const; int front() const;
+    void push(int value); void pop(); void clear();
+private: // TODO: design head/tail representation.
 };
-
-}  // namespace stack_queue
-}  // namespace whudsa
-
-#endif  // WHUDSA_STACK_QUEUE_LINKED_QUEUE_HPP
+}

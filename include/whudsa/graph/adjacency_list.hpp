@@ -1,18 +1,10 @@
-#ifndef WHUDSA_GRAPH_ADJACENCY_LIST_HPP
-#define WHUDSA_GRAPH_ADJACENCY_LIST_HPP
-
+#pragma once
 namespace whudsa {
-namespace graph {
-
-// TODO: Implement adjacency list from scratch.
-// Rule: no STL containers/algorithms in core implementations.
-class AdjacencyList {
+class AdjacencyListGraph {
 public:
-    AdjacencyList() = default;
-    // TODO: define the course-required API before implementing it.
+    AdjacencyListGraph(int vertexCount,int maxEdges,bool directed=false); ~AdjacencyListGraph();
+    int vertexCount() const; void addEdge(int u,int v,int weight=1);
+    int firstEdge(int u) const; int nextEdge(int edgeIndex) const; int edgeTo(int edgeIndex) const; int edgeWeight(int edgeIndex) const;
+private: // TODO: implement array-style head[] / to[] / next[] / weight[].
 };
-
-}  // namespace graph
-}  // namespace whudsa
-
-#endif  // WHUDSA_GRAPH_ADJACENCY_LIST_HPP
+}

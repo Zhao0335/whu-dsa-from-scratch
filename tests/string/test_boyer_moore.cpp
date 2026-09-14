@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/string/boyer_moore.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing boyer_moore.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::boyerMooreSearch;
+int main(){ assert(boyerMooreSearch("HERE IS A SIMPLE EXAMPLE","EXAMPLE")==17); assert(boyerMooreSearch("abc","z")==-1); }

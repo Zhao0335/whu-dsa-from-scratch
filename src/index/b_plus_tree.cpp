@@ -1,9 +1,7 @@
 #include "whudsa/index/b_plus_tree.hpp"
 
 namespace whudsa {
-namespace index {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace index
-}  // namespace whudsa
+} // namespace whudsa

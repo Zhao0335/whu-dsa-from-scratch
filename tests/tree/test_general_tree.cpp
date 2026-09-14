@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/tree/general_tree.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing general_tree.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::GeneralTree;
+int main(){ GeneralTree t; int r=t.addRoot(1); t.addChild(r,2); t.addChild(r,3); assert(t.nodeCount()==3&&t.childCount(r)==2); }

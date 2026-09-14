@@ -1,18 +1,15 @@
-#ifndef WHUDSA_LINEAR_UNROLLED_LINKED_LIST_HPP
-#define WHUDSA_LINEAR_UNROLLED_LINKED_LIST_HPP
-
+#pragma once
 namespace whudsa {
-namespace linear {
-
-// TODO: Implement unrolled linked list from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class UnrolledLinkedList {
 public:
-    UnrolledLinkedList() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit UnrolledLinkedList(int blockCapacity = 8);
+    ~UnrolledLinkedList();
+    int size() const;
+    int get(int index) const;
+    void insert(int index, int value);
+    void erase(int index);
+    void pushBack(int value);
+private:
+    // TODO: design block node representation and split/merge policy.
 };
-
-}  // namespace linear
-}  // namespace whudsa
-
-#endif  // WHUDSA_LINEAR_UNROLLED_LINKED_LIST_HPP
+}

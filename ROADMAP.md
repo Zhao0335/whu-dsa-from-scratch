@@ -1,58 +1,95 @@
-# Implementation Roadmap
+# 实现进度
 
-Use this as the practice checklist. Do not tick a topic until implementation, tests and complexity notes are complete.
+说明：第一次写通可以把 `[ ]` 改成 `[~]`；完成测试、复杂度记录，并且之后能闭卷重写核心版本，再改成 `[x]`。
 
-- [ ] Complexity basics and asymptotic analysis
-- [ ] Sequential list
-- [ ] Singly linked list
-- [ ] Doubly linked list
-- [ ] Circular linked list
-- [ ] Unrolled/block linked list
-- [ ] Array stack
-- [ ] Linked stack
-- [ ] Circular queue
-- [ ] Linked queue
-- [ ] Sequential string
-- [ ] Linked string
+## Phase 0 基础
+- [ ] complexity notes
+- [ ] build / test workflow
+
+## Phase 1 线性表
+- [ ] SeqList
+- [ ] SinglyLinkedList
+- [ ] DoublyLinkedList
+- [ ] CircularLinkedList
+- [ ] UnrolledLinkedList
+
+## Phase 2 栈与队列
+- [ ] ArrayStack
+- [ ] LinkedStack
+- [ ] CircularQueue
+- [ ] LinkedQueue
+
+## Phase 3 字符串
+- [ ] SeqString
+- [ ] LinkedString
+- [ ] Naive Match
 - [ ] KMP
 - [ ] Boyer-Moore
-- [ ] Sequential binary tree
-- [ ] Linked binary tree
-- [ ] Tree traversals
-- [ ] Huffman tree and coding
-- [ ] General tree / forest conversion
-- [ ] Binary heap
-- [ ] D-ary heap
-- [ ] Leftist heap
-- [ ] Skew heap
-- [ ] Binomial heap
-- [ ] Graph adjacency matrix
-- [ ] Graph adjacency list
+
+## Phase 4 树
+- [ ] BinaryTree
+- [ ] ArrayBinaryTree
+- [ ] GeneralTree / Forest Conversion
+- [ ] HuffmanTree
+
+## Phase 5 优先级队列
+- [ ] BinaryHeap
+- [ ] D-ary Heap
+- [ ] LeftistHeap
+- [ ] SkewHeap
+- [ ] BinomialHeap
+
+## Phase 6 图基础
+- [ ] AdjacencyMatrix
+- [ ] AdjacencyList
 - [ ] DFS / BFS
-- [ ] Graph connectivity
-- [ ] Single-source shortest path
-- [ ] All-pairs shortest path
-- [ ] Kruskal
+- [ ] Connectivity
+
+## Phase 7 不相交集
+- [ ] DisjointSet
+
+## Phase 8 排序
+- [ ] InsertionSort
+- [ ] SelectionSort
+- [ ] BubbleSort
+- [ ] QuickSort
+- [ ] MergeSort
+- [ ] HeapSort
+
+## Phase 9 图应用
+- [ ] Dijkstra
+- [ ] Floyd
 - [ ] Prim
-- [ ] Topological sort / AOV
-- [ ] Critical path / AOE
-- [ ] Disjoint set with path compression
-- [ ] Insertion / selection / bubble sort
-- [ ] Quick sort
-- [ ] Merge sort
-- [ ] Heap sort
-- [ ] Sequential / binary / indexed search
-- [ ] Binary search tree
-- [ ] AVL tree
-- [ ] Hash table: open addressing
-- [ ] Hash table: chaining
-- [ ] Inverted index
-- [ ] Bitmap index
-- [ ] B-tree
-- [ ] B+ tree
+- [ ] Kruskal
+- [ ] TopologicalSort
+- [ ] CriticalPath
+
+## Phase 10 查找
+- [ ] SequentialSearch
+- [ ] BinarySearch
+- [ ] IndexedSearch
+- [ ] BST
+- [ ] AVL
+- [ ] Hash Open Addressing
+- [ ] Hash Chaining
+
+## Phase 11 索引
+- [ ] InvertedIndex
+- [ ] BitmapIndex
+- [ ] BTree
+- [ ] BPlusTree
+
+## Phase 12 算法设计
 - [ ] Enumeration
 - [ ] Backtracking
-- [ ] Branch and bound
-- [ ] Divide and conquer + Master theorem
-- [ ] Dynamic programming
-- [ ] Greedy algorithms and correctness proofs
+- [ ] Branch and Bound
+- [ ] Divide and Conquer
+- [ ] Dynamic Programming
+- [ ] Greedy
+
+## Phase 13 综合复习
+- [ ] No-STL data structure rewrite
+- [ ] No-STL algorithm rewrite
+- [ ] Graph + Heap + Dijkstra
+- [ ] Graph + Sort + DSU + Kruskal
+- [ ] Heap + Huffman coding

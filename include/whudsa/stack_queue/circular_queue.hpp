@@ -1,18 +1,11 @@
-#ifndef WHUDSA_STACK_QUEUE_CIRCULAR_QUEUE_HPP
-#define WHUDSA_STACK_QUEUE_CIRCULAR_QUEUE_HPP
-
+#pragma once
 namespace whudsa {
-namespace stack_queue {
-
-// TODO: Implement circular queue from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class CircularQueue {
 public:
-    CircularQueue() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit CircularQueue(int capacity = 8); ~CircularQueue();
+    int size() const; bool empty() const; bool full() const;
+    int front() const; void push(int value); void pop(); void clear();
+private:
+    // TODO: define front/rear meaning, empty/full condition, and wrap-around policy.
 };
-
-}  // namespace stack_queue
-}  // namespace whudsa
-
-#endif  // WHUDSA_STACK_QUEUE_CIRCULAR_QUEUE_HPP
+}

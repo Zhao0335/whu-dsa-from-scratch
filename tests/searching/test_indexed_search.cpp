@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/searching/indexed_search.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing indexed_search.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::indexedSearch;
+int main(){ int d[]={1,4,7,10,13,20}; int mx[]={7,20}; int st[]={0,3}; assert(indexedSearch(d,6,mx,st,2,13)==4); }

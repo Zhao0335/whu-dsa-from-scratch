@@ -1,9 +1,7 @@
 #include "whudsa/string/linked_string.hpp"
 
 namespace whudsa {
-namespace string {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace string
-}  // namespace whudsa
+} // namespace whudsa

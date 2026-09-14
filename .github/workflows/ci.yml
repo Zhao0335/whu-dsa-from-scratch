@@ -1,11 +1,15 @@
-name: CI
+name: skeleton-ci
 on: [push, pull_request]
 jobs:
-  build-and-test:
+  sanity:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cmake -S . -B build
-      - run: cmake --build build --parallel
-      - run: ctest --test-dir build --output-on-failure
-      - run: python3 scripts/check_no_stl.py
+      - name: Configure
+        run: cmake -S . -B build
+      - name: Build default targets
+        run: cmake --build build
+      - name: Run repository sanity test
+        run: ctest --test-dir build -R '^repo_sanity$' --output-on-failure
+      - name: Check forbidden STL shortcuts
+        run: python3 scripts/check_no_stl.py

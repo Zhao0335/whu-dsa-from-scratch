@@ -1,18 +1,12 @@
-#ifndef WHUDSA_TREE_HUFFMAN_TREE_HPP
-#define WHUDSA_TREE_HUFFMAN_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace tree {
-
-// TODO: Implement huffman tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class HuffmanTree {
 public:
-    HuffmanTree() = default;
-    // TODO: define the course-required API before implementing it.
+    HuffmanTree(); ~HuffmanTree();
+    void build(const char* symbols,const int* weights,int n);
+    int weightedPathLength() const;
+    bool encode(char symbol,char* outCode,int outCapacity) const;
+    bool decode(const char* bits,char* outText,int outCapacity) const;
+private: // TODO: design nodes and tree construction; later reuse your BinaryHeap.
 };
-
-}  // namespace tree
-}  // namespace whudsa
-
-#endif  // WHUDSA_TREE_HUFFMAN_TREE_HPP
+}

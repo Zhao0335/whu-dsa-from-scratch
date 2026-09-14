@@ -1,18 +1,10 @@
-#ifndef WHUDSA_INDEX_B_PLUS_TREE_HPP
-#define WHUDSA_INDEX_B_PLUS_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace index {
-
-// TODO: Implement b plus tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class BPlusTree {
 public:
-    BPlusTree() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit BPlusTree(int order=4); ~BPlusTree();
+    void insert(int key,int value); bool find(int key,int& value) const; bool erase(int key);
+    int rangeQuery(int low,int high,int* outKeys,int* outValues,int maxOut) const;
+private: // TODO: internal/leaf nodes, leaf links, split/merge policy.
 };
-
-}  // namespace index
-}  // namespace whudsa
-
-#endif  // WHUDSA_INDEX_B_PLUS_TREE_HPP
+}

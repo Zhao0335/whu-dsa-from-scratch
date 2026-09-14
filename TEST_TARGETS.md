@@ -1,0 +1,61 @@
+# 测试 Target 索引
+
+每个练习 target 默认不会参与 `cmake --build build`。写完对应模块后单独构建。
+
+| 模块 | 构建并运行测试 |
+|---|---|
+| `src/linear/seq_list.cpp` | `test_seq_list` |
+| `src/linear/singly_linked_list.cpp` | `test_singly_linked_list` |
+| `src/linear/doubly_linked_list.cpp` | `test_doubly_linked_list` |
+| `src/linear/circular_linked_list.cpp` | `test_circular_linked_list` |
+| `src/linear/unrolled_linked_list.cpp` | `test_unrolled_linked_list` |
+| `src/stack_queue/array_stack.cpp` | `test_array_stack` |
+| `src/stack_queue/linked_stack.cpp` | `test_linked_stack` |
+| `src/stack_queue/circular_queue.cpp` | `test_circular_queue` |
+| `src/stack_queue/linked_queue.cpp` | `test_linked_queue` |
+| `src/string/seq_string.cpp` | `test_seq_string` |
+| `src/string/linked_string.cpp` | `test_linked_string` |
+| `src/string/naive_match.cpp` | `test_naive_match` |
+| `src/string/kmp.cpp` | `test_kmp` |
+| `src/string/boyer_moore.cpp` | `test_boyer_moore` |
+| `src/tree/binary_tree.cpp` | `test_binary_tree` |
+| `src/tree/array_binary_tree.cpp` | `test_array_binary_tree` |
+| `src/tree/general_tree.cpp` | `test_general_tree` |
+| `src/tree/huffman_tree.cpp` | `test_huffman_tree` |
+| `src/priority_queue/binary_heap.cpp` | `test_binary_heap` |
+| `src/priority_queue/d_ary_heap.cpp` | `test_d_ary_heap` |
+| `src/priority_queue/leftist_heap.cpp` | `test_leftist_heap` |
+| `src/priority_queue/skew_heap.cpp` | `test_skew_heap` |
+| `src/priority_queue/binomial_heap.cpp` | `test_binomial_heap` |
+| `src/graph/adjacency_matrix.cpp` | `test_adjacency_matrix` |
+| `src/graph/adjacency_list.cpp` | `test_adjacency_list` |
+| `src/graph/traversal.cpp` | `test_traversal` |
+| `src/graph/connectivity.cpp` | `test_connectivity` |
+| `src/disjoint_set/disjoint_set.cpp` | `test_disjoint_set` |
+| `src/sorting/insertion_sort.cpp` | `test_insertion_sort` |
+| `src/sorting/selection_sort.cpp` | `test_selection_sort` |
+| `src/sorting/bubble_sort.cpp` | `test_bubble_sort` |
+| `src/sorting/quick_sort.cpp` | `test_quick_sort` |
+| `src/sorting/merge_sort.cpp` | `test_merge_sort` |
+| `src/sorting/heap_sort.cpp` | `test_heap_sort` |
+| `src/graph/shortest_path.cpp` | `test_shortest_path` |
+| `src/graph/mst.cpp` | `test_mst` |
+| `src/graph/topological_sort.cpp` | `test_topological_sort` |
+| `src/graph/critical_path.cpp` | `test_critical_path` |
+| `src/searching/sequential_search.cpp` | `test_sequential_search` |
+| `src/searching/binary_search.cpp` | `test_binary_search` |
+| `src/searching/indexed_search.cpp` | `test_indexed_search` |
+| `src/searching/bst.cpp` | `test_bst` |
+| `src/searching/avl.cpp` | `test_avl` |
+| `src/searching/hash_open_addressing.cpp` | `test_hash_open_addressing` |
+| `src/searching/hash_chaining.cpp` | `test_hash_chaining` |
+| `src/index/inverted_index.cpp` | `test_inverted_index` |
+| `src/index/bitmap_index.cpp` | `test_bitmap_index` |
+| `src/index/b_tree.cpp` | `test_b_tree` |
+| `src/index/b_plus_tree.cpp` | `test_b_plus_tree` |
+| `src/algorithm/enumeration.cpp` | `test_enumeration` |
+| `src/algorithm/backtracking.cpp` | `test_backtracking` |
+| `src/algorithm/branch_and_bound.cpp` | `test_branch_and_bound` |
+| `src/algorithm/divide_and_conquer.cpp` | `test_divide_and_conquer` |
+| `src/algorithm/dynamic_programming.cpp` | `test_dynamic_programming` |
+| `src/algorithm/greedy.cpp` | `test_greedy` |

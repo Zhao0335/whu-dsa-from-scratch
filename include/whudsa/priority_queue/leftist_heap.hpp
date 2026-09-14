@@ -1,18 +1,11 @@
-#ifndef WHUDSA_PRIORITY_QUEUE_LEFTIST_HEAP_HPP
-#define WHUDSA_PRIORITY_QUEUE_LEFTIST_HEAP_HPP
-
+#pragma once
 namespace whudsa {
-namespace priority_queue {
-
-// TODO: Implement leftist heap from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class LeftistHeap {
 public:
-    LeftistHeap() = default;
-    // TODO: define the course-required API before implementing it.
+    LeftistHeap(); ~LeftistHeap();
+    int size() const; bool empty() const; int top() const;
+    void push(int value); void pop(); void merge(LeftistHeap& other);
+private:
+    // TODO: design the internal representation and invariants yourself.
 };
-
-}  // namespace priority_queue
-}  // namespace whudsa
-
-#endif  // WHUDSA_PRIORITY_QUEUE_LEFTIST_HEAP_HPP
+}

@@ -1,18 +1,9 @@
-#ifndef WHUDSA_INDEX_B_TREE_HPP
-#define WHUDSA_INDEX_B_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace index {
-
-// TODO: Implement b tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class BTree {
 public:
-    BTree() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit BTree(int minimumDegree=2); ~BTree();
+    bool contains(int key) const; void insert(int key); bool erase(int key);
+private: // TODO: design node keys/children, split/borrow/merge.
 };
-
-}  // namespace index
-}  // namespace whudsa
-
-#endif  // WHUDSA_INDEX_B_TREE_HPP
+}

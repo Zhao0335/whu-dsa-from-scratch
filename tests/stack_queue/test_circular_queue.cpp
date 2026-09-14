@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/stack_queue/circular_queue.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing circular_queue.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::CircularQueue;
+int main(){ CircularQueue q(4); q.push(1); q.push(2); q.push(3); assert(q.front()==1); q.pop(); q.push(4); q.pop(); q.push(5); assert(q.front()==3); q.pop(); assert(q.front()==4); q.pop(); assert(q.front()==5); q.pop(); assert(q.empty()); }

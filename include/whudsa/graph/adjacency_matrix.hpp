@@ -1,18 +1,10 @@
-#ifndef WHUDSA_GRAPH_ADJACENCY_MATRIX_HPP
-#define WHUDSA_GRAPH_ADJACENCY_MATRIX_HPP
-
+#pragma once
 namespace whudsa {
-namespace graph {
-
-// TODO: Implement adjacency matrix from scratch.
-// Rule: no STL containers/algorithms in core implementations.
-class AdjacencyMatrix {
+class AdjacencyMatrixGraph {
 public:
-    AdjacencyMatrix() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit AdjacencyMatrixGraph(int vertexCount,bool directed=false); ~AdjacencyMatrixGraph();
+    int vertexCount() const; void addEdge(int u,int v,int weight=1); void removeEdge(int u,int v);
+    bool hasEdge(int u,int v) const; int weight(int u,int v) const; int degree(int v) const;
+private: // TODO: design matrix and no-edge representation.
 };
-
-}  // namespace graph
-}  // namespace whudsa
-
-#endif  // WHUDSA_GRAPH_ADJACENCY_MATRIX_HPP
+}

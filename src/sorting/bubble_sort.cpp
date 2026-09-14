@@ -1,9 +1,7 @@
 #include "whudsa/sorting/bubble_sort.hpp"
 
 namespace whudsa {
-namespace sorting {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace sorting
-}  // namespace whudsa
+} // namespace whudsa

@@ -1,18 +1,17 @@
-#ifndef WHUDSA_STACK_QUEUE_ARRAY_STACK_HPP
-#define WHUDSA_STACK_QUEUE_ARRAY_STACK_HPP
-
+#pragma once
 namespace whudsa {
-namespace stack_queue {
-
-// TODO: Implement array stack from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class ArrayStack {
 public:
-    ArrayStack() = default;
-    // TODO: define the course-required API before implementing it.
+    ArrayStack();
+    explicit ArrayStack(int initialCapacity);
+    ~ArrayStack();
+    int size() const;
+    bool empty() const;
+    int top() const;
+    void push(int value);
+    void pop();
+    void clear();
+private:
+    // TODO: design dynamic-array stack representation.
 };
-
-}  // namespace stack_queue
-}  // namespace whudsa
-
-#endif  // WHUDSA_STACK_QUEUE_ARRAY_STACK_HPP
+}

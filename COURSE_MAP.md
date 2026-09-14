@@ -1,40 +1,36 @@
-# Course Coverage Map
+# 课程内容与仓库模块对应
 
-## 1. Introduction and complexity
-Data-structure definitions, logical/physical structure, operations, asymptotic notation, time/space complexity, algorithm optimization.
+本表依据上传的《教学日历》整理。
 
-## 2. Linear lists
-Sequential list, singly linked list, doubly linked list, circular linked list, unrolled/block linked list.
-
-## 3. Stack and queue
-Array stack, linked stack, circular array queue, linked queue, classic applications.
-
-## 4. String
-Sequential string, linked string, basic string operations, KMP, Boyer-Moore.
-
-## 5. Trees and binary trees
-Sequential/linked binary tree, recursive and iterative traversals, level order, Huffman tree/coding, general tree/forest, tree-forest-binary-tree conversion.
-
-## 6. Priority queues
-Binary heap, D-ary heap, leftist heap, skew heap, binomial heap.
-
-## 7. Graph
-Adjacency matrix/list, DFS, BFS, undirected connectivity, directed connectivity.
-
-## 8. Graph applications
-Single-source and all-pairs shortest paths, Kruskal, Prim, topological sort/AOV, AOE, critical path/activities.
-
-## 9. Disjoint set
-Find/union, path compression, union by rank/size.
-
-## 10. Internal sorting
-Insertion, selection, bubble, quick, merge, heap sort; stability and complexity comparison.
-
-## 11. Searching
-Sequential/binary/indexed search, BST, AVL, hash tables, hash functions, open addressing and chaining.
-
-## 12. Indexes
-Static/linear index concepts, inverted index, bitmap index, B-tree, B+ tree, static vs dynamic indexes.
-
-## 13. Algorithm design foundations
-Enumeration, backtracking, branch and bound, divide and conquer, Master theorem, dynamic programming, greedy methods, optimal substructure and correctness arguments.
+| 教学内容 | 仓库位置 |
+|---|---|
+| 绪论、复杂度、渐近符号、算法优化 | `notes/complexity.md` |
+| 顺序表 | `linear/seq_list.*` |
+| 单链表 | `linear/singly_linked_list.*` |
+| 双链表 | `linear/doubly_linked_list.*` |
+| 循环链表 | `linear/circular_linked_list.*` |
+| 块状链表 | `linear/unrolled_linked_list.*` |
+| 顺序栈、链栈 | `stack_queue/array_stack.*`, `linked_stack.*` |
+| 顺序/循环队列、链队列 | `stack_queue/circular_queue.*`, `linked_queue.*` |
+| 字符串顺序/链式实现 | `string/seq_string.*`, `linked_string.*` |
+| 朴素匹配、KMP、BM | `string/naive_match.*`, `kmp.*`, `boyer_moore.*` |
+| 二叉树顺序/链式存储、遍历 | `tree/array_binary_tree.*`, `binary_tree.*` |
+| Huffman 树与编码 | `tree/huffman_tree.*` |
+| 树、森林、转换 | `tree/general_tree.*`, `notes/tree.md` |
+| 二叉堆、D 堆 | `priority_queue/binary_heap.*`, `d_ary_heap.*` |
+| 左堆、斜堆、二项堆 | `priority_queue/leftist_heap.*`, `skew_heap.*`, `binomial_heap.*` |
+| 图邻接矩阵、邻接表 | `graph/adjacency_matrix.*`, `adjacency_list.*` |
+| DFS、BFS、连通性 | `graph/traversal.*`, `connectivity.*` |
+| 单源/全源最短路 | `graph/shortest_path.*` |
+| Prim、Kruskal | `graph/mst.*` |
+| AOV、拓扑排序 | `graph/topological_sort.*` |
+| AOE、关键路径/关键活动 | `graph/critical_path.*` |
+| 不相交集、路径压缩 | `disjoint_set/disjoint_set.*` |
+| 插入/选择/交换/归并等内排序 | `sorting/` |
+| 顺序查找、二分、索引查找 | `searching/` |
+| BST、AVL | `searching/bst.*`, `avl.*` |
+| 散列表、冲突解决 | `searching/hash_open_addressing.*`, `hash_chaining.*` |
+| 倒排索引、位索引 | `index/inverted_index.*`, `bitmap_index.*` |
+| B 树、B+ 树 | `index/b_tree.*`, `b_plus_tree.*` |
+| 枚举、回溯、分支限界 | `algorithm/` |
+| 分治、动态规划、贪心、主定理 | `algorithm/`, `notes/algorithm_design.md` |

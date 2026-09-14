@@ -1,9 +1,7 @@
 #include "whudsa/string/boyer_moore.hpp"
 
 namespace whudsa {
-namespace string {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace string
-}  // namespace whudsa
+} // namespace whudsa

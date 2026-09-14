@@ -1,9 +1,7 @@
 #include "whudsa/graph/shortest_path.hpp"
 
 namespace whudsa {
-namespace graph {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace graph
-}  // namespace whudsa
+} // namespace whudsa

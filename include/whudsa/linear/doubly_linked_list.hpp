@@ -1,18 +1,19 @@
-#ifndef WHUDSA_LINEAR_DOUBLY_LINKED_LIST_HPP
-#define WHUDSA_LINEAR_DOUBLY_LINKED_LIST_HPP
-
+#pragma once
 namespace whudsa {
-namespace linear {
-
-// TODO: Implement doubly linked list from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class DoublyLinkedList {
 public:
-    DoublyLinkedList() = default;
-    // TODO: define the course-required API before implementing it.
+    DoublyLinkedList();
+    ~DoublyLinkedList();
+    int size() const;
+    bool empty() const;
+    void pushFront(int value);
+    void pushBack(int value);
+    void insert(int index, int value);
+    void erase(int index);
+    int get(int index) const;
+    int getFromBack(int reverseIndex) const;
+    void clear();
+private:
+    // TODO: design Node/head/tail representation yourself.
 };
-
-}  // namespace linear
-}  // namespace whudsa
-
-#endif  // WHUDSA_LINEAR_DOUBLY_LINKED_LIST_HPP
+}

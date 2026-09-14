@@ -1,18 +1,10 @@
-#ifndef WHUDSA_TREE_GENERAL_TREE_HPP
-#define WHUDSA_TREE_GENERAL_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace tree {
-
-// TODO: Implement general tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class GeneralTree {
 public:
-    GeneralTree() = default;
-    // TODO: define the course-required API before implementing it.
+    GeneralTree(); ~GeneralTree();
+    int addRoot(int value); int addChild(int parentId,int value);
+    int nodeCount() const; int childCount(int nodeId) const;
+private: // TODO: design child-sibling representation and ids.
 };
-
-}  // namespace tree
-}  // namespace whudsa
-
-#endif  // WHUDSA_TREE_GENERAL_TREE_HPP
+}

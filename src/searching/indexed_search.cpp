@@ -1,9 +1,7 @@
 #include "whudsa/searching/indexed_search.hpp"
 
 namespace whudsa {
-namespace searching {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace searching
-}  // namespace whudsa
+} // namespace whudsa

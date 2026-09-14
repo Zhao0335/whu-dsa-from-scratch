@@ -1,18 +1,10 @@
-#ifndef WHUDSA_STRING_LINKED_STRING_HPP
-#define WHUDSA_STRING_LINKED_STRING_HPP
-
+#pragma once
 namespace whudsa {
-namespace string {
-
-// TODO: Implement linked string from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class LinkedString {
 public:
-    LinkedString() = default;
-    // TODO: define the course-required API before implementing it.
+    LinkedString(); explicit LinkedString(const char* text); ~LinkedString();
+    int length() const; char charAt(int index) const;
+    void append(char ch); void insert(int index, char ch); void erase(int index);
+private: // TODO: choose per-node or block-based linked string representation.
 };
-
-}  // namespace string
-}  // namespace whudsa
-
-#endif  // WHUDSA_STRING_LINKED_STRING_HPP
+}

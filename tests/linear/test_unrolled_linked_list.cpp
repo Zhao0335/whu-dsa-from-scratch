@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/linear/unrolled_linked_list.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing unrolled_linked_list.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::UnrolledLinkedList;
+int main(){ UnrolledLinkedList l(3); for(int i=0;i<10;++i) l.pushBack(i); assert(l.size()==10&&l.get(7)==7); l.insert(5,99); assert(l.get(5)==99); l.erase(5); assert(l.get(5)==5); }

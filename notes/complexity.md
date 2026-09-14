@@ -1,3 +1,10 @@
-# Complexity Notes
+# 复杂度笔记
 
-TODO: asymptotic notation, time/space complexity and analysis.
+请自己补完：
+
+- O、Ω、Θ 的含义与区别：
+- 最好/平均/最坏复杂度：
+- 时间复杂度与空间复杂度：
+- 顺序表扩容的均摊复杂度：
+- 二分为什么是 O(log n)：
+- 分治递推与主定理：

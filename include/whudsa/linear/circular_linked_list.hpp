@@ -1,18 +1,17 @@
-#ifndef WHUDSA_LINEAR_CIRCULAR_LINKED_LIST_HPP
-#define WHUDSA_LINEAR_CIRCULAR_LINKED_LIST_HPP
-
+#pragma once
 namespace whudsa {
-namespace linear {
-
-// TODO: Implement circular linked list from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class CircularLinkedList {
 public:
-    CircularLinkedList() = default;
-    // TODO: define the course-required API before implementing it.
+    CircularLinkedList();
+    ~CircularLinkedList();
+    int size() const;
+    bool empty() const;
+    void pushBack(int value);
+    void insert(int index, int value);
+    void erase(int index);
+    int get(int index) const;
+    void clear();
+private:
+    // TODO: decide whether to store head, tail, or both, and define the stop condition.
 };
-
-}  // namespace linear
-}  // namespace whudsa
-
-#endif  // WHUDSA_LINEAR_CIRCULAR_LINKED_LIST_HPP
+}

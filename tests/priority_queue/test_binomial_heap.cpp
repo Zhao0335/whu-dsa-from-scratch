@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/priority_queue/binomial_heap.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing binomial_heap.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::BinomialHeap;
+int main(){ BinomialHeap h; h.push(5); h.push(1); h.push(3); assert(h.top()==1); h.pop(); assert(h.top()==3); }

@@ -1,5 +1,5 @@
-build/
-cmake-build-*/
+/build/
+/build-*/
 .vscode/
 .idea/
 *.o

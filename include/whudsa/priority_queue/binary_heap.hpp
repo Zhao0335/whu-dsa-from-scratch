@@ -1,18 +1,11 @@
-#ifndef WHUDSA_PRIORITY_QUEUE_BINARY_HEAP_HPP
-#define WHUDSA_PRIORITY_QUEUE_BINARY_HEAP_HPP
-
+#pragma once
 namespace whudsa {
-namespace priority_queue {
-
-// TODO: Implement binary heap from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class BinaryHeap {
 public:
-    BinaryHeap() = default;
-    // TODO: define the course-required API before implementing it.
+    BinaryHeap(); ~BinaryHeap();
+    int size() const; bool empty() const; int top() const;
+    void push(int value); void pop(); void build(const int* values,int n);
+private:
+    // TODO: design the internal representation and invariants yourself.
 };
-
-}  // namespace priority_queue
-}  // namespace whudsa
-
-#endif  // WHUDSA_PRIORITY_QUEUE_BINARY_HEAP_HPP
+}

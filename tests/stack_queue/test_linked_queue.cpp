@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/stack_queue/linked_queue.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing linked_queue.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::LinkedQueue;
+int main(){ LinkedQueue q; q.push(1); q.push(2); assert(q.front()==1); q.pop(); assert(q.front()==2); q.pop(); assert(q.empty()); q.push(3); assert(q.front()==3); }

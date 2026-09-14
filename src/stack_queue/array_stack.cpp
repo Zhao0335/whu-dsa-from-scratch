@@ -1,9 +1,7 @@
 #include "whudsa/stack_queue/array_stack.hpp"
 
 namespace whudsa {
-namespace stack_queue {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace stack_queue
-}  // namespace whudsa
+} // namespace whudsa

@@ -1,18 +1,10 @@
-#ifndef WHUDSA_TREE_ARRAY_BINARY_TREE_HPP
-#define WHUDSA_TREE_ARRAY_BINARY_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace tree {
-
-// TODO: Implement array binary tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class ArrayBinaryTree {
 public:
-    ArrayBinaryTree() = default;
-    // TODO: define the course-required API before implementing it.
+    explicit ArrayBinaryTree(int capacity=16); ~ArrayBinaryTree();
+    void set(int index,int value); int get(int index) const; bool exists(int index) const;
+    int parentIndex(int index) const; int leftChildIndex(int index) const; int rightChildIndex(int index) const;
+private: // TODO: choose 0-based representation and occupancy tracking.
 };
-
-}  // namespace tree
-}  // namespace whudsa
-
-#endif  // WHUDSA_TREE_ARRAY_BINARY_TREE_HPP
+}

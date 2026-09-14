@@ -1,8 +1,5 @@
-#include <cassert>
 #include "whudsa/graph/connectivity.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing connectivity.
-    assert(true);
-    return 0;
-}
+#include "whudsa/graph/adjacency_list.hpp"
+#include <cassert>
+using namespace whudsa;
+int main(){ AdjacencyListGraph g(5,16,false); g.addEdge(0,1); g.addEdge(3,4); assert(connectedComponents(g)==3); }

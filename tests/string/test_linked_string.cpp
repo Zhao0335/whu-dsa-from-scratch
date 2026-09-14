@@ -1,8 +1,4 @@
-#include <cassert>
 #include "whudsa/string/linked_string.hpp"
-
-int main() {
-    // TODO: add tests before/while implementing linked_string.
-    assert(true);
-    return 0;
-}
+#include <cassert>
+using whudsa::LinkedString;
+int main(){ LinkedString s("abc"); s.insert(1,'X'); assert(s.charAt(1)=='X'); s.erase(1); assert(s.charAt(1)=='b'); s.append('d'); assert(s.length()==4&&s.charAt(3)=='d'); }

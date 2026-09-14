@@ -1,18 +1,14 @@
-#ifndef WHUDSA_TREE_BINARY_TREE_HPP
-#define WHUDSA_TREE_BINARY_TREE_HPP
-
+#pragma once
 namespace whudsa {
-namespace tree {
-
-// TODO: Implement binary tree from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class BinaryTree {
 public:
-    BinaryTree() = default;
-    // TODO: define the course-required API before implementing it.
+    BinaryTree(); ~BinaryTree();
+    void insertLevelOrder(int value);
+    int size() const; int height() const; int leafCount() const;
+    void preorder(int* out, int& outSize) const;
+    void inorder(int* out, int& outSize) const;
+    void postorder(int* out, int& outSize) const;
+    void levelOrder(int* out, int& outSize) const;
+private: // TODO: design Node/root and traversal helpers.
 };
-
-}  // namespace tree
-}  // namespace whudsa
-
-#endif  // WHUDSA_TREE_BINARY_TREE_HPP
+}

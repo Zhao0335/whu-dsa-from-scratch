@@ -1,18 +1,10 @@
-#ifndef WHUDSA_INDEX_INVERTED_INDEX_HPP
-#define WHUDSA_INDEX_INVERTED_INDEX_HPP
-
+#pragma once
 namespace whudsa {
-namespace index {
-
-// TODO: Implement inverted index from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class InvertedIndex {
 public:
-    InvertedIndex() = default;
-    // TODO: define the course-required API before implementing it.
+    InvertedIndex(); ~InvertedIndex();
+    void addDocument(int docId,const char* text);
+    int search(const char* term,int* outDocIds,int maxOut) const;
+private: // TODO: later reuse your own string/hash/list structures.
 };
-
-}  // namespace index
-}  // namespace whudsa
-
-#endif  // WHUDSA_INDEX_INVERTED_INDEX_HPP
+}

@@ -1,18 +1,21 @@
-#ifndef WHUDSA_LINEAR_SINGLY_LINKED_LIST_HPP
-#define WHUDSA_LINEAR_SINGLY_LINKED_LIST_HPP
-
+#pragma once
 namespace whudsa {
-namespace linear {
-
-// TODO: Implement singly linked list from scratch.
-// Rule: no STL containers/algorithms in core implementations.
 class SinglyLinkedList {
 public:
-    SinglyLinkedList() = default;
-    // TODO: define the course-required API before implementing it.
+    SinglyLinkedList();
+    ~SinglyLinkedList();
+    int size() const;
+    bool empty() const;
+    void pushFront(int value);
+    void pushBack(int value);
+    void insert(int index, int value);
+    void erase(int index);
+    bool removeFirst(int value);
+    int get(int index) const;
+    int find(int value) const;
+    void reverse();
+    void clear();
+private:
+    // TODO: design Node and list representation yourself.
 };
-
-}  // namespace linear
-}  // namespace whudsa
-
-#endif  // WHUDSA_LINEAR_SINGLY_LINKED_LIST_HPP
+}

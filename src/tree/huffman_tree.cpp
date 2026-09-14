@@ -1,9 +1,7 @@
 #include "whudsa/tree/huffman_tree.hpp"
 
 namespace whudsa {
-namespace tree {
 
-// TODO: implementation.
+// TODO: implement this module yourself.
 
-}  // namespace tree
-}  // namespace whudsa
+} // namespace whudsa

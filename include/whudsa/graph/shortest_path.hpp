@@ -1,18 +1,2 @@
-#ifndef WHUDSA_GRAPH_SHORTEST_PATH_HPP
-#define WHUDSA_GRAPH_SHORTEST_PATH_HPP
-
-namespace whudsa {
-namespace graph {
-
-// TODO: Implement shortest path from scratch.
-// Rule: no STL containers/algorithms in core implementations.
-class ShortestPath {
-public:
-    ShortestPath() = default;
-    // TODO: define the course-required API before implementing it.
-};
-
-}  // namespace graph
-}  // namespace whudsa
-
-#endif  // WHUDSA_GRAPH_SHORTEST_PATH_HPP
+#pragma once
+namespace whudsa { class AdjacencyListGraph; void dijkstraSimple(const AdjacencyListGraph& g,int source,int* dist); void dijkstraHeap(const AdjacencyListGraph& g,int source,int* dist); void floydWarshall(int* matrix,int n,int infinity); }
